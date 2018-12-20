@@ -1,17 +1,162 @@
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/Explore.css')}}">
-        <title>Homepage</title>
-    </head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Explore Editic</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
 <body>
-<h2>Editic</h2>
-<div style="float:left; width:20%;">
-<ul>
-  <li><a href="create.html">Start a Topic</a></li>
-  <li><a href="loggedin.html">Home</a></li>
-  <li><a href="#settings.html">Settings</a></li>
-  <li><a href="#about.html">About</a></li>
-</ul>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+      <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="index.html"><IMG SRC="Editic.png" ALT="Editic" WIDTH=140 HEIGHT=50></IMG></a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="Explore.html">
+                        <i class="fa fa-globe"></i>
+                        <p>Explore</p>
+                    </a>
+                </li>
+                <li>
+                    <li>
+                    <a href="create.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Create New</p>
+                    </a>
+                </li>
+
+        
+            </ul>
+      </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Hello</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                <p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-lg hidden-md"></b>
+                  <p class="hidden-lg hidden-md">
+                    5 Notifications
+                    <b class="caret"></b>
+                  </p>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+                <p class="hidden-lg hidden-md">Search</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="user.html">
+                               <p>Account</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <p>
+                    More
+                    <b class="caret"></b>
+                  </p>
+
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Recent Posts</a></li>
+
+                                <li class="divider"></li>
+                                <li><a href="#">Settings</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+            <li class="separator hidden-lg"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
 </div>
 <div style="float:right; width:80%; ">
 
@@ -23,29 +168,16 @@
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
+{% for row in rows %}
     
-<a style =" color: indianred;" href="">Ts ad his. Vel invidunt vituperata in</a>
+<a style =" color: indianred;" href="{{url_for('topic1')}}?name={{row[2]}}"> {{row[2]}} </a>
     <p>Lorem ipsum dolor sit amet, te quem epicuri disputationi nam, mel no veri definiebas. Causae aperiri an usu, et modus dicat nec. Vim decore iracundia in. Eu mei rebum nobis accumsan, mei ad nulla iusto scripserit, delectus elaboraret philosophia eos id. Decore consul eloquentiam qui cu, has ea eros vero accommodare.
 
-        Clita reformidans contentiones ad his. Vel invidunt vituperata in, ubique mandamus ocurreret eos ut, nisl erant aliquid pri eu. Eu vocent feugiat eum, cum et platonem laboramus. Eos in ridens constituam, odio volumus sit id. No nobis sanctus platonem mea, ut nibh saperet vim. 
+        Clita reformidans contentiones ad his. Vel invidunt vituperata in, ubique mandamus ocurreret eos ut, nisl erant aliquid pri eu. Eu vocent feugiat eum, cum et platonem laboramus. Eos in ridens constituam, odio volumus sit id. No nobis sanctus platonem mea, ut nibh saperet vim... 
 </p>
 <br />
-<a style =" color: indianred;" href="">Doctus animal necessitatibus</a>
-        <p>Ex dicant iisque intellegam pro, cu convenire maluisset concludaturque nec, tantas omnesque qui ad.
+{% endfor %}
 
-        Et mea libris diceret erroribus, suas facete dignissim ad qui, in deleniti petentium sea. Te eam dolorum recusabo. Nisl equidem persequeris sea an, an mei iisque eloquentiam. Doctus animal necessitatibus has id, no vim alia sonet. Usu nonumy graeco adipisci cu, augue lucilius an pro. Adhuc ornatus ocurreret pri ea, sed eripuit repudiare necessitatibus ei.
-</p>
-<br />
-<a style =" color: indianred;" href="">Vis quidam tibique cu</a>
-<p>
-    No putent nominati delicatissimi est. Quo in detracto platonem honestatis. Ad sit suas quidam omittantur, cu pro velit omnesque. Vis quidam tibique cu, sonet argumentum te mei, te alienum consulatu per.
-
-    Aeque primis comprehensam mel id, magna doming evertitur vim eu. Nibh commune has ad. Hinc accusata scripserit nam ex. Ea omnesque oportere vim, his elit apeirian ne. Ex usu ferri oporteat, nam ad praesent imperdiet comprehensam.
-</p>
-    
-<a style =" color: indianred;" href="">Vel invidunt vituperata in</a>
-    <p>Lorem ipsum dolor sit amet, te quem epicuri disputationi nam, mel no veri definiebas. Causae aperiri an usu, et modus dicat nec. Vim decore iracundia in. Eu mei rebum nobis accumsan, mei ad nulla iusto scripserit, delectus elaboraret philosophia eos id. Decore consul eloquentiam qui cu, has ea eros vero accommodare.
-    </p>
 
     
 </div>

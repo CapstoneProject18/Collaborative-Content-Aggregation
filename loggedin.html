@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Editic</title>
+  <title>Weather Data for Crop Monitoring</title>
 
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
@@ -41,14 +41,14 @@
 
     -->
 
-    	<div class="sidebar-wrapper">
+      <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#"><IMG SRC="Editic.png" ALT="Editic" WIDTH=140 HEIGHT=50></IMG></a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="#">
+                    <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Home</p>
                     </a>
@@ -66,15 +66,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="create.html">
+                    <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>Create New</p>
+                        <p>Your Topics</p>
                     </a>
                 </li>
 
-				
+        
             </ul>
-    	</div>
+      </div>
     </div>
 
     <div class="main-panel">
@@ -94,17 +94,17 @@
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
+                <p class="hidden-lg hidden-md">Dashboard</p>
                             </a>
                         </li>
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
                                     <b class="caret hidden-lg hidden-md"></b>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
+                  <p class="hidden-lg hidden-md">
+                    5 Notifications
+                    <b class="caret"></b>
+                  </p>
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">Notification 1</a></li>
@@ -117,7 +117,7 @@
                         <li>
                            <a href="">
                                 <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
+                <p class="hidden-lg hidden-md">Search</p>
                             </a>
                         </li>
                     </ul>
@@ -130,12 +130,8 @@
                         </li>
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-										More
-										<b class="caret"></b>
-									</p>
-
-                              </a>
+                                    <p>More
+                    <b class="caret"></b></p></a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">Recent Posts</a></li>
 
@@ -148,45 +144,49 @@
                                 <p>Log out</p>
                             </a>
                         </li>
-						<li class="separator hidden-lg"></li>
+            <li class="separator hidden-lg"></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+<div style="float:right; width:80%; ">
+<div class="recent">
+<h3 style="color:darkcyan;">Recent Topics</h3>
+<br/> 
+{% for row in rows %}
+<a  href="{{url_for('topic1')}}?name={{row[2]}}">->{{ row[2] }}</a>
+    <h3>How to build a PC brought to you by iBuyPower®</h3>
+    <P>
+    	1. Put motherboard on motherboard box<br/>
+
+      2. Put CPU in the motherboard<br/>
+
+      3. Put ram in the Motherboard<br/>
+
+      4. Put cooler on the motherboard.<br/>
+
+      5. Put the motherboard in the case<br/>
+
+      6. Put GPU in the motherboard<br/>
+
+      7. Put cables in the motherboard<br/>
+
+
+    </P>
+<br />
+{% endfor %}
     </div>
+    <br/>
+    <br/>
+    <br/>
+ 
+
 </div>
+
+<br/>
 
 
 </body>
-
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
-
-
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to the <b>Editic Community</b> - Content Aggergation."
-
-            },{
-                type: 'info',
-                timer: 4000
-            });
-
-    	});
-	</script>
-
-</html>
+    </html>
+        
